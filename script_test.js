@@ -8,6 +8,7 @@ function calcular() {
     const FLU = document.getElementById("flu")
     const MAN = document.getElementById("man")
     const SUP = document.getElementById("sup")
+    const ERROR = document.getElementById("error");
 
     if (peso > 30) {
         const SC1500 = Math.round(superficieCorporal(peso) * 1500);
@@ -17,6 +18,7 @@ function calcular() {
         FLU.style.display = "block";
         MAN.style.display = "block";
         VOL.style.display = "none";
+        ERROR.style.display="none";
         superficie.style.display = "block";
         hollyday.style.display = "none";
         info.style.display = "none";
@@ -31,9 +33,9 @@ function calcular() {
         FLU.style.display = "block"
         MAN.style.display = "block"
         SUP.style.display = "none"
+        ERROR.style.display="none";
     } else {
-        const ERROR = document.getElementById("error");
-        ERROR.style.display = "block";
+        ERROR.style.display = "block"
         VOL.style.display = "none"
         FLU.style.display = "none"
         MAN.style.display = "none"
