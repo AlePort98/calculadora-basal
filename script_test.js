@@ -4,6 +4,7 @@ button.addEventListener("click", calcular)
 function calcular() {
     const input = document.getElementById("peso")
     const peso = parseInt(input.value)
+    const VOL = document.getElementById("vol")
     const FLU = document.getElementById("flu")
     const MAN = document.getElementById("man")
     const SUP = document.getElementById("sup")
@@ -15,6 +16,7 @@ function calcular() {
         MAN.innerHTML = ("Mantenimiento(2000): ") + sc2000 + (" cc/hr");
         FLU.style.display = "block";
         MAN.style.display = "block";
+        VOL.style.display = "none";
         superficie.style.display = "block";
         hollyday.style.display = "none";
         info.style.display = "none";
@@ -22,15 +24,17 @@ function calcular() {
         const VOLUMEN_DIARIO = hollidaySegar(peso)
         const MANTENIMIENTO = (VOLUMEN_DIARIO / 24);
         const MM2 = Math.round(MANTENIMIENTO * 1.5)
-        SUP.innerHTML = ("Volumen Diario" + VOLUMEN_DIARIO + "cc")
+        VOL.innerHTML = ("Volumen Diario:" + VOLUMEN_DIARIO + "cc")
         FLU.innerHTML =("dosis por hora: ")+ Math.round(MANTENIMIENTO) + " cc/hr"
         MAN.innerHTML = ("el mantenimiento es: ") + "m+m/2:" + MM2 + " cc/hr"
+        VOL.style.display = "block"
         FLU.style.display = "block"
         MAN.style.display = "block"
-        SUP.style.display = "block"
+        SUP.style.display = "none"
     } else {
         const ERROR = document.getElementById("error");
         ERROR.style.display = "block";
+        VOL.style.display = "none"
         FLU.style.display = "none"
         MAN.style.display = "none"
         SUP.style.display = "none"
