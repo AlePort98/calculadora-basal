@@ -2,7 +2,9 @@
 
 body{
     font-family: "Merriweather", serif;
-    background: #16737f;
+    background-image:url("Pasillo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #3E363F
 }
 
@@ -25,7 +27,7 @@ body{
     float: left;
 }
 #detalle{
-    background: #402e8a;
+    background: #9d87f9;
     width: 50%;
     height: 100%;
     float: left;
@@ -49,8 +51,8 @@ button {
       font-weight: bold;
       padding: 12px 45px;
       border-radius: 30px;
-      background-color: #3f33ab;
-      border: 1px solid #482e8e;
+      background-color: #6b5edd;
+      border: 1px solid #7b5cd3;
       color: #FFFFFF;
       text-transform: uppercase;
       letter-spacing: 1px;
